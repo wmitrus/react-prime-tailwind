@@ -16,6 +16,7 @@ export function LayoutProvider({ children }: ChildContainerProps) {
     colorScheme: 'dark',
     theme: 'lara-dark-cyan',
     scale: 14,
+    tableSize: 'normal',
   });
 
   const [layoutState, setLayoutState] = useState<LayoutState>({
