@@ -22,6 +22,8 @@ import {
   //   MenuModelItem,
   AppMenuItemProps,
   AppMenuItem,
+  TableSize,
+  TableSizeOption,
 } from './layout';
 
 type ChildContainerProps = {
@@ -49,4 +51,6 @@ export type {
   AppMenuItemProps,
   ChildContainerProps,
   AppMenuItem,
+  TableSize,
+  TableSizeOption,
 };

@@ -38,6 +38,7 @@ export type LayoutConfig = {
   colorScheme: string;
   theme: string;
   scale: number;
+  tableSize: TableSize;
 };
 
 export interface LayoutContextProps {
@@ -105,4 +106,11 @@ export interface AppMenuItemProps {
   index?: number;
   root?: boolean;
   className?: string;
+}
+
+type TableSize = 'small' | 'normal' | 'large';
+
+interface TableSizeOption {
+  label: string;
+  value: string;
 }
