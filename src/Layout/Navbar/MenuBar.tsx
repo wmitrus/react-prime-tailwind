@@ -1,16 +1,26 @@
 import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
+// import { InputText } from 'primereact/inputtext';
 import { MenuItem } from 'primereact/menuitem';
 import { Avatar } from 'primereact/avatar';
 
 import { PrimeReactContext } from 'primereact/api';
 import { LayoutContext } from '@/store/LayoutContext';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { InputSwitch } from 'primereact/inputswitch';
+import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton';
+import { TableSizeOption } from 'types';
 
 export default function MenuBar() {
   const { layoutConfig, setLayoutConfig } = useContext(LayoutContext);
   const { changeTheme } = useContext(PrimeReactContext);
+  const [sizeOptions] = useState<TableSizeOption[]>([
+    { label: 'Small', value: 'small' },
+    { label: 'Normal', value: 'normal' },
+    { label: 'Large', value: 'large' },
+  ]);
+  // const [size, setSize] = useState<TableSize>(
+  //   sizeOptions[1].value as TableSize
+  // );
 
   const itemRenderer = (item: MenuItem) => (
     <a className="flex align-items-center p-menuitem-link">
@@ -35,19 +45,16 @@ export default function MenuBar() {
         {
           label: 'Core',
           icon: 'pi pi-bolt',
-          shortcut: '⌘+S',
           template: itemRenderer,
         },
         {
           label: 'Blocks',
           icon: 'pi pi-server',
-          shortcut: '⌘+B',
           template: itemRenderer,
         },
         {
           label: 'UI Kit',
           icon: 'pi pi-pencil',
-          shortcut: '⌘+U',
           template: itemRenderer,
         },
         {
@@ -111,15 +118,22 @@ export default function MenuBar() {
 
   const end = (
     <div className="flex align-items-center gap-2">
+      <SelectButton
+        value={layoutConfig.tableSize}
+        onChange={(e: SelectButtonChangeEvent) =>
+          setLayoutConfig((prevState) => ({ ...prevState, tableSize: e.value }))
+        }
+        options={sizeOptions}
+      />
       <InputSwitch
         checked={layoutConfig.colorScheme === 'dark'}
         onChange={(e) => changeThemeHandler(e.value)}
       />
-      <InputText
+      {/* <InputText
         placeholder="Search"
         type="text"
         className="w-8rem sm:w-auto"
-      />
+      /> */}
       <Avatar
         image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png"
         shape="circle"
