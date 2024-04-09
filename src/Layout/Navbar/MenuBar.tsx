@@ -1,5 +1,4 @@
 import { Menubar } from 'primereact/menubar';
-// import { InputText } from 'primereact/inputtext';
 import { MenuItem } from 'primereact/menuitem';
 import { Avatar } from 'primereact/avatar';
 
@@ -18,9 +17,6 @@ export default function MenuBar() {
     { label: 'Normal', value: 'normal' },
     { label: 'Large', value: 'large' },
   ]);
-  // const [size, setSize] = useState<TableSize>(
-  //   sizeOptions[1].value as TableSize
-  // );
 
   const itemRenderer = (item: MenuItem) => (
     <a className="flex align-items-center p-menuitem-link">
