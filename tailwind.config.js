@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       height: {
+        18: '68px',
         '100vh-h-12': 'calc(100vh - 3rem)',
+        'h-navbar': 'h-48',
       },
     },
   },
