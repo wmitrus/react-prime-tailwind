@@ -26,6 +26,8 @@ import {
   TableSizeOption,
 } from './layout';
 
+import { ConnectionType } from './connections';
+
 type ChildContainerProps = {
   children: ReactNode;
 };
@@ -53,4 +55,5 @@ export type {
   AppMenuItem,
   TableSize,
   TableSizeOption,
+  ConnectionType,
 };
