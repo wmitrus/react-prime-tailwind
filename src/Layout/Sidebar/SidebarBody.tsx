@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
-import PanelMenuTest from './PanelMenuTest';
+import PanelMenuTest from './PanelMenuComponent';
 
 type SidebarBodyProps = object & ComponentPropsWithoutRef<'div'>;
 
