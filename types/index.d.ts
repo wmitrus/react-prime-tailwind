@@ -28,6 +28,12 @@ import {
 
 import { ConnectionType } from './connections';
 
+import {
+  ToastContextValue,
+  ToastSeverity,
+  IShowToast,
+} from './prime/PrimeToast';
+
 type ChildContainerProps = {
   children: ReactNode;
 };
@@ -56,4 +62,7 @@ export type {
   TableSize,
   TableSizeOption,
   ConnectionType,
+  ToastContextValue,
+  ToastSeverity,
+  IShowToast,
 };
