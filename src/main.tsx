@@ -9,13 +9,16 @@ import 'primereact/resources/primereact.min.css';
 
 import { LayoutProvider } from './store/LayoutContext.tsx';
 import App from './App.tsx';
+import ErrorBoundary from './ErrorBoundary.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <PrimeReactProvider>
-      <LayoutProvider>
-        <App />
-      </LayoutProvider>
-    </PrimeReactProvider>
+    <ErrorBoundary fallback="Error">
+      <PrimeReactProvider>
+        <LayoutProvider>
+          <App />
+        </LayoutProvider>
+      </PrimeReactProvider>
+    </ErrorBoundary>
   </React.StrictMode>
 );
