@@ -1,5 +1,6 @@
 import { MenuItem } from 'primereact/menuitem';
 import { itemRenderer } from '@/Layout/Sidebar/SidebarItemRender';
+import { router } from './router';
 
 export const items: MenuItem[] = [
   {
@@ -32,20 +33,30 @@ export const items: MenuItem[] = [
     ],
   },
   {
-    label: 'Reports',
+    label: 'Demo',
     icon: 'pi pi-chart-bar',
     template: itemRenderer,
     items: [
       {
-        label: 'Sales',
+        label: 'Home',
         icon: 'pi pi-chart-line',
         badge: 3,
+        // url: '/demo',
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        command: (_e) => {
+          router.navigate('/');
+        },
         template: itemRenderer,
       },
       {
-        label: 'Products',
+        label: 'Table',
         icon: 'pi pi-list',
         badge: 6,
+        url: '/demo/table',
+        command: () => {
+          router.navigate('/demo/table');
+          // router.navigate(_e.item.url as string);
+        },
         template: itemRenderer,
       },
     ],
