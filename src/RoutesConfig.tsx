@@ -5,7 +5,7 @@ import Page from './Layout/Page';
 import Home from './Pages/Home';
 import PrimeTablePage from './Pages/PrimeTablePage';
 
-// eslint-disable-next-line react-hooks/rules-of-hooks, @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getRoutesConfig(_queryClient?: QueryClient): RouteObject[] {
   const routesConfig: RouteObject[] = [
     {
