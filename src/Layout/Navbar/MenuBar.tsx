@@ -113,13 +113,14 @@ export default function MenuBar() {
   );
 
   const end = (
-    <div className="flex align-items-center gap-2">
+    <div className="flex align-items-center gap-2 ">
       <SelectButton
         value={layoutConfig.tableSize}
         onChange={(e: SelectButtonChangeEvent) =>
           setLayoutConfig((prevState) => ({ ...prevState, tableSize: e.value }))
         }
         options={sizeOptions}
+        className="text-xs"
       />
       <InputSwitch
         checked={layoutConfig.colorScheme === 'dark'}
