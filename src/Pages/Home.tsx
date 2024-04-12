@@ -8,7 +8,7 @@ type HomeProps = object & ComponentPropsWithoutRef<'div'>;
 export default function Home({ className, ...rest }: HomeProps) {
   return (
     <div className={cn(['', className])} {...rest}>
-      HOME
+      <h1>HOME</h1>
       <Link to="/demo/table">Table</Link>
     </div>
   );
