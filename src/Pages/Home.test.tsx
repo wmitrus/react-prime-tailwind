@@ -16,4 +16,27 @@ describe('App', () => {
     // Expect
     expect(screen.getByRole('heading', { level: 1, name: /Home/i }));
   });
+
+  // it('Renders Home Page contains heading with value "Home"', () => {
+  //   render(
+  //     <MemoryRouter>
+  //       <App />
+  //     </MemoryRouter>
+  //   );
+  //   // Act
+  //   // Expect
+  //   expect(screen.getByRole('heading', { level: 1, name: /Home/i }));
+  // });
+
+  // it('Renders Home Page contains heading with value "Home"', () => {
+  //   const routesConfig = getRoutesConfig();
+  //   const router = createMemoryRouter(routesConfig, {
+  //     initialEntries: ['/demo'],
+  //   });
+
+  //   render(<RouterProvider router={router} />);
+  //   // Act
+  //   // Expect
+  //   expect(screen.getByRole('heading', { level: 1, name: /Not Found/i }));
+  // });
 });
