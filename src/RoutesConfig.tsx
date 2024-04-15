@@ -6,7 +6,7 @@ import Home from './Pages/Home';
 import PrimeTablePage from './Pages/PrimeTablePage';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getRoutesConfig(_queryClient?: QueryClient): RouteObject[] {
+export function getRoutesConfig(_queryClient?: QueryClient): RouteObject[] {
   const routesConfig: RouteObject[] = [
     {
       path: '/',
@@ -31,5 +31,3 @@ function getRoutesConfig(_queryClient?: QueryClient): RouteObject[] {
 
   return routesConfig;
 }
-
-export default getRoutesConfig;
